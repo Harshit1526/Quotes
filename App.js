@@ -23,8 +23,8 @@ const App = () => {
       })
       .then(result => {
         console.log(result);
-        setQuote(result.content);
-        setAuthor(result.author);
+        setQuote(result[0].content);
+        setAuthor(result[0].author);
         setIsLoading(false);
       })
       .catch(error => {
